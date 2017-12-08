@@ -13,6 +13,7 @@ import { UnauthorizedComponent } from './components/unauthorized/unauthorized.co
 
 import { AuthModule, OidcSecurityService } from 'angular-auth-oidc-client';
 import { AuthService } from './components/services/auth.service';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
     declarations: [
@@ -27,6 +28,7 @@ import { AuthService } from './components/services/auth.service';
         AuthModule.forRoot(),
         CommonModule,
         HttpModule,
+        HttpClientModule,
         FormsModule,
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
